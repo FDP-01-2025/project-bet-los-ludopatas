@@ -11,6 +11,9 @@ int banca [10];
 int totalJugador = 0 , totalBanca =0;
 int i, modo;
 float saldo, saldPerdido, saldGanado;
+cout << "Bienvenido al casino Bet++, donde convertimos ludopatas en millonario o en ludopobres."<<endl;
+cout << "Por favor ingrese el monoto de efectivo que desea utilizar (SALDO MINIMO REQUERIDO $100) "<<endl;
+cin >> saldo;
 if (saldo >= 100 && saldo <=200 ){
     cout <<"Por lo visto es tu primera vez en las Bet++. Bienvenido al mejor casino de apuestas online"<<endl;
 }
@@ -25,10 +28,6 @@ else if (saldo >= 200 && saldo < 300){
     cout <<" Por eso toma este humilde regalo:"<< saldo + 100 << endl;
 }
 
-
-cout << "Bienvenido al casino Bet++, donde convertimos ludopatas en millonario o en ludopobres."<<endl;
-cout << "Por favor ingrese el monoto de efectivo que desea utilizar (SALDO MINIMO REQUERIDO $100) "<<endl;
-cin >> saldo;
 cout << "Ahora, por favor elija un modo de juego"<<endl;
 cout << "____________________________ "<<endl;
 cout << "|1.Black Jack               |"<<endl;
