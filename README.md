@@ -1,16 +1,18 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/mi1WNrHU)
-# Proyecto de C++ - [Nombre del Juego]
+# Proyecto de C++ - Bet++
 
 ## Descripción del Proyecto
 
-Breve descripción del juego, su propósito, cómo se juega y cualquier otro detalle importante que describa la idea general del proyecto.
+Bet++ es una plataforma de casino en línea diseñada con el objetivo de ofrecer entretenimiento y diversión a personas que desean experimentar la emoción de apostar sin arriesgar dinero real.
+El juego incluye cuatro de las modalidades más clásicas de los casinos: Blackjack, tragamonedas, ruleta y Keno. El usuario tendrá la posibilidad de elegir la modalidad que más le guste y, además, podrá disfrutar la experiencia en compañía de sus amigos.
+
 
 **Por ejemplo:**
 Este proyecto consiste en un juego de aventuras donde el jugador debe explorar un mundo virtual, recoger objetos, resolver acertijos y enfrentar enemigos. El juego utiliza estructuras de control como `if`, `switch`, y bucles `while` y `for` para generar interacciones dinámicas.
 
 ## Equipo
 
-- **Nombre del equipo:** [Nombre del equipo]
+- **Nombre del equipo:** Bet++ (Los ludópatas)
 
 ### Integrantes del equipo
 
@@ -22,8 +24,10 @@ Este proyecto consiste en un juego de aventuras donde el jugador debe explorar u
 
 3. **Nombre completo:** [Nombre del estudiante 3]  
    **Carnet:** [Carnet del estudiante 3]
+   
+4. **Nombre completo:** Saul Ernesto Giron Vigil  
+   **Carnet:** 00033325
 
-(Agregar más integrantes si es necesario)
 
 ## Instrucciones de Ejecución
 
