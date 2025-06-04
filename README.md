@@ -6,10 +6,6 @@
 Bet++ es una plataforma de casino en línea diseñada con el objetivo de ofrecer entretenimiento y diversión a personas que desean experimentar la emoción de apostar sin arriesgar dinero real.
 El juego incluye cuatro de las modalidades más clásicas de los casinos: Blackjack, tragamonedas, ruleta y Keno. El usuario tendrá la posibilidad de elegir la modalidad que más le guste y, además, podrá disfrutar la experiencia en compañía de sus amigos.
 
-
-**Por ejemplo:**
-Este proyecto consiste en un juego de aventuras donde el jugador debe explorar un mundo virtual, recoger objetos, resolver acertijos y enfrentar enemigos. El juego utiliza estructuras de control como `if`, `switch`, y bucles `while` y `for` para generar interacciones dinámicas.
-
 ## Equipo
 
 - **Nombre del equipo:** Bet++ (Los ludópatas)
