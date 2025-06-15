@@ -173,9 +173,7 @@ srand(time(0));
                 }
 
                 cout << "Tu saldo actual es: $" << saldo << endl;
-                break;
-            }
-
+                break;         }
             default:
                 cout << "Modo de juego aún no implementado. Por favor, elige otra opción.\n";
         }
