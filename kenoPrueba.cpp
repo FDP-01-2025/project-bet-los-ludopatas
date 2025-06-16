@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
     srand(time(0));
-
+//numero aleotorio 
     cout << " PROBANDO GENERACION ALEATORIA DE NUMEROS KENO <<\n";
 
     int numeros[10];
@@ -25,11 +25,25 @@ int main() {
         }
     }
 
-    cout << "Numeros sorteados:<<\n";
+    
     for (int i = 0; i < 10; i++) {
         cout << numeros[i] << " ";
     }
    
+// Ingreso de numeros del jugador 
+cout << " INGRESO DE NUMEROS DEL JUGADOR \n";
+
+int numerosJugador[10];
+for (int i = 0; i < 10; i++) {
+    cout << "Numero #" << i + 1 << ": ";
+    cin >> numerosJugador[i];
+}
+
+cout << "\nNumeros ingresados por el jugador:\n";
+for (int i = 0; i < 10; i++) {
+    cout << numerosJugador[i] << " ";
+}
+cout << " Fin del turno \n";
 
     return 0;
 }
