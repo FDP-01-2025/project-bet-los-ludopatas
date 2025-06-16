@@ -7,7 +7,7 @@ int main() {
     srand(time(0));
   int num;
 //numero aleotorio 
-    cout << " PROBANDO GENERACION ALEATORIA DE NUMEROS KENO <<\n";
+   
 
     int numeros[10];
     int count = 0;
@@ -28,7 +28,7 @@ int main() {
 
     
     for (int i = 0; i < 10; i++) {
-        cout << numeros[i] << " ";
+       
     }
    
 // Ingreso de numeros del jugador 
@@ -39,9 +39,9 @@ for (int i = 0; i < 10; i++) {
     cout << "Numero #" << i + 1 << ": ";
     cin >> numerosJugador[i];
     
-    if (num < 1 || num > 80) {
+    if (num <=1 || num > 80) {
         cout << "NUMERO INVALIDO. INGRESA UNO ENTRE 1 Y 80\n";
-        i--; // Reintentar misma posición
+        i--;
     } else {
         numerosJugador[i] = num;
     }
