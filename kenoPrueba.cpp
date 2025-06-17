@@ -35,6 +35,22 @@ void mostrarNumeros(int arr[])
     }
     cout << "\n";
 }
+void ingresoNumerosJugador(int jugador[])
+{
+    cout << " INGRESO DE NUMEROS DEL JUGADOR \n";
+    for (int i = 0; i < MAX_NUMEROS; i++)
+    {
+        cout << "Numero #" << i + 1 << ": ";
+        cin >> jugador[i];
+    }
+
+    cout << "\nNumeros ingresados por el jugador:\n";
+    for (int i = 0; i < MAX_NUMEROS; i++)
+    {
+        cout << jugador[i] << " ";
+    }
+    cout << " Fin del turno \n";
+}
 
 int main()
 {
@@ -54,12 +70,11 @@ int main()
         {
         case 1:
             cout << "NUMEROS GENERADOS ALEATORIAMENTE\n";
-            int numerosPrueba[MAX_NUMEROS];
-            generarNumeros(numerosPrueba);
-            mostrarNumeros(numerosPrueba);
+            int numerosJugador[MAX_NUMEROS];
+            ingresoNumerosJugador(numerosJugador);
+
             break;
 
-        
             break;
         case 2:
             cout << "JUGAR KENO MULTIJUGADOR (PENDIENTE)\n";
