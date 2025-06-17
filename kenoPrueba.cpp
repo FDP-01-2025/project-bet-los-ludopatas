@@ -6,66 +6,53 @@ using namespace std;
 const int MAX_NUMEROS = 10;
 const int RANGO = 80;
 
-void generarNumeros(int numeros[])
-{
+void generarNumeros(int numeros[]) {
     int count = 0;
-    while (count < MAX_NUMEROS)
-    {
+    while (count < MAX_NUMEROS) {
         int num = rand() % RANGO + 1;
         bool repetido = false;
-        for (int i = 0; i < count; i++)
-        {
-            if (numeros[i] == num)
-            {
+        for (int i = 0; i < count; i++) {
+            if (numeros[i] == num) {
                 repetido = true;
                 break;
             }
         }
-        if (!repetido)
-        {
+        if (!repetido) {
             numeros[count++] = num;
         }
     }
 }
 
-void mostrarNumeros(int arr[])
-{
-    for (int i = 0; i < MAX_NUMEROS; i++)
-    {
+void mostrarNumeros(int arr[]) {
+    for (int i = 0; i < MAX_NUMEROS; i++) {
         cout << arr[i] << " ";
     }
     cout << "\n";
 }
 
-void ingresoNumerosJugador(int jugador[])
-{
+void ingresoNumerosJugador(int jugador[]) {
     cout << " INGRESO DE NUMEROS DEL JUGADOR\n";
     int num;
-    for (int i = 0; i < MAX_NUMEROS;)
-    {
+    for (int i = 0; i < MAX_NUMEROS;) {
         cout << "Numero #" << i + 1 << ": ";
         cin >> num;
 
         // Validacion del rango
-        if (num < 1 || num > RANGO)
-        {
+        if (num < 1 || num > RANGO) {
             cout << "Numero fuera de rango. Ingresa un numero entre 1 y 80.\n";
             continue;
         }
 
         // Validacion de repetidos
         bool repetido = false;
-        for (int j = 0; j < i; j++)
-        {
-            if (jugador[j] == num)
-            {
+        for (int j = 0; j < i; j++) {
+            if (jugador[j] == num) {
                 repetido = true;
                 break;
             }
         }
 
-        if (repetido)
-        {
+        if (repetido) {
             cout << "Numero repetido. Intenta de nuevo.\n";
             continue;
         }
@@ -74,22 +61,17 @@ void ingresoNumerosJugador(int jugador[])
     }
 
     cout << "Numeros ingresados por el jugador:\n";
-    for (int i = 0; i < MAX_NUMEROS; i++)
-    {
+    for (int i = 0; i < MAX_NUMEROS; i++) {
         cout << jugador[i] << " ";
     }
     cout << " Fin del turno\n";
 }
 
-int contarAciertos(int jugador[], int sorteados[])
-{
+int contarAciertos(int jugador[], int sorteados[]) {
     int aciertos = 0;
-    for (int i = 0; i < MAX_NUMEROS; i++)
-    {
-        for (int j = 0; j < MAX_NUMEROS; j++)
-        {
-            if (jugador[i] == sorteados[j])
-            {
+    for (int i = 0; i < MAX_NUMEROS; i++) {
+        for (int j = 0; j < MAX_NUMEROS; j++) {
+            if (jugador[i] == sorteados[j]) {
                 aciertos++;
                 break;
             }
@@ -98,13 +80,11 @@ int contarAciertos(int jugador[], int sorteados[])
     return aciertos;
 }
 
-int main()
-{
+int main() {
     srand(time(0));
     int opcion;
 
-    do
-    {
+    do {
         cout << "\n=== MENU KENO ===\n";
         cout << "1. JUGAR KENO SOLO\n";
         cout << "2. JUGAR KENO MULTIJUGADOR\n";
@@ -112,15 +92,15 @@ int main()
         cout << "INGRESA UNA OPCION: ";
         cin >> opcion;
 
-        switch (opcion)
-        {
+        switch (opcion) {
         case 1:
         {
-            cout << "NUMEROS GENERADOS ALEATORIAMENTE\n";
             int numerosJugador[MAX_NUMEROS];
+            int numerosSorteados[MAX_NUMEROS];
+
+            cout << "NUMEROS GENERADOS ALEATORIAMENTE\n";
             ingresoNumerosJugador(numerosJugador);
 
-            int numerosSorteados[MAX_NUMEROS];
             generarNumeros(numerosSorteados);
 
             cout << "NUMEROS SORTEADOS\n";
@@ -130,6 +110,7 @@ int main()
             cout << "ACERTASTE " << aciertos << " NUMEROS\n";
             break;
         }
+
         case 2:
         {
             int jugador1[MAX_NUMEROS];
@@ -142,6 +123,11 @@ int main()
             cout << "PRESIONA ENTER PARA CAMBIAR AL JUGADOR 2...\n";
             cin.ignore();
             cin.get();
+
+            //  limpieza de consola
+            for (int i = 0; i < 50; i++) {
+                cout << "\n";
+            }
 
             cout << "TURNO DEL JUGADOR 2\n";
             ingresoNumerosJugador(jugador2);
@@ -166,6 +152,7 @@ int main()
 
             break;
         }
+
         case 3:
             cout << "GRACIAS POR JUGAR KENO\n";
             break;
