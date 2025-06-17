@@ -2,56 +2,76 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
+const int MAX_NUMEROS = 10;
+const int RANGO = 80;
 
-int main() {
-    srand(time(0));
-  int num;
-//numero aleotorio 
-   
-
-    int numeros[10];
+void generarNumeros(int numeros[])
+{
     int count = 0;
-
-    while (count < 10) {
-        int num = rand() % 80 + 1;
+    while (count < MAX_NUMEROS)
+    {
+        int num = rand() % RANGO + 1;
         bool repetido = false;
-        for (int i = 0; i < count; i++) {
-            if (numeros[i] == num) {
+        for (int i = 0; i < count; i++)
+        {
+            if (numeros[i] == num)
+            {
                 repetido = true;
                 break;
             }
         }
-        if (!repetido) {
+        if (!repetido)
+        {
             numeros[count++] = num;
         }
     }
-
-    
-    for (int i = 0; i < 10; i++) {
-       
-    }
-   
-// Ingreso de numeros del jugador 
-cout << " INGRESO DE NUMEROS DEL JUGADOR \n";
-
-int numerosJugador[10];
-for (int i = 0; i < 10; i++) {
-    cout << "Numero #" << i + 1 << ": ";
-    cin >> numerosJugador[i];
-    
-    if (num <=1 || num > 80) {
-        cout << "NUMERO INVALIDO. INGRESA UNO ENTRE 1 Y 80\n";
-        i--;
-    } else {
-        numerosJugador[i] = num;
-    }
 }
 
-cout << "\nNumeros ingresados por el jugador:\n";
-for (int i = 0; i < 10; i++) {
-    cout << numerosJugador[i] << " ";
+void mostrarNumeros(int arr[])
+{
+    for (int i = 0; i < MAX_NUMEROS; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << "\n";
 }
-cout << " Fin del turno \n";
+
+int main()
+{
+    srand(time(0));
+    int opcion;
+
+    do
+    {
+        cout << "\n=== MENU KENO ===\n";
+        cout << "1. JUGAR KENO SOLO\n";
+        cout << "2. JUGAR KENO MULTIJUGADOR\n";
+        cout << "3. SALIR\n";
+        cout << "INGRESA UNA OPCION: ";
+        cin >> opcion;
+
+        switch (opcion)
+        {
+        case 1:
+            cout << "NUMEROS GENERADOS ALEATORIAMENTE\n";
+            int numerosPrueba[MAX_NUMEROS];
+            generarNumeros(numerosPrueba);
+            mostrarNumeros(numerosPrueba);
+            break;
+
+        
+            break;
+        case 2:
+            cout << "JUGAR KENO MULTIJUGADOR (PENDIENTE)\n";
+            break;
+        case 3:
+            cout << "GRACIAS POR JUGAR KENO\n";
+            break;
+        default:
+            cout << "OPCION INVALIDA\n";
+        }
+
+    } while (opcion != 3);
 
     return 0;
 }
