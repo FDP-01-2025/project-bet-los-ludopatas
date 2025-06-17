@@ -35,22 +35,43 @@ void mostrarNumeros(int arr[])
     }
     cout << "\n";
 }
-void ingresoNumerosJugador(int jugador[])
-{
+void ingresoNumerosJugador(int jugador[]) {
     cout << " INGRESO DE NUMEROS DEL JUGADOR \n";
-    for (int i = 0; i < MAX_NUMEROS; i++)
-    {
+    int num;
+    for (int i = 0; i < MAX_NUMEROS;) {
         cout << "Numero #" << i + 1 << ": ";
-        cin >> jugador[i];
+        cin >> num;
+
+        // Validación del rango
+        if (num < 1 || num > RANGO) {
+            cout << "Numero fuera de rango. Ingresa un numero entre 1 y 80.\n";
+            continue;
+        }
+
+        // Validación de repetidos
+        bool repetido = false;
+        for (int j = 0; j < i; j++) {
+            if (jugador[j] == num) {
+                repetido = true;
+                break;
+            }
+        }
+
+        if (repetido) {
+            cout << "Numero repetido. Intenta de nuevo.\n";
+            continue;
+        }
+
+        jugador[i++] = num;
     }
 
     cout << "\nNumeros ingresados por el jugador:\n";
-    for (int i = 0; i < MAX_NUMEROS; i++)
-    {
+    for (int i = 0; i < MAX_NUMEROS; i++) {
         cout << jugador[i] << " ";
     }
     cout << " Fin del turno \n";
 }
+
 
 int main()
 {
