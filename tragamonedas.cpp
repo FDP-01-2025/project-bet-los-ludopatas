@@ -22,13 +22,13 @@ int main (){
     switch(select){
         case 1:
         do{
-        string symbols[11] = {"", "", "BAR", "🍒","","","","","",};
+        string symbols[11] = {"", "*", "B", "C", "D", "E", "F", "7", "8", "X", "$"};
         cout <<"The result is:"<< endl;
         cout << endl;
         for (int i = 0; i<3; i++){
             for (int j=0; j<3; j++){
             matrix[i][j]= range(rng);
-            cout<< matrix[i][j] << " ";
+            cout<< symbols[matrix[i][j]] << " ";
             }
             cout << endl;
         }
@@ -42,22 +42,23 @@ int main (){
         
         cout<< "Do you want to play again? dont give up the ludopathy waits..."<< endl;
         cout<< "1.Yeah buddy"<< endl;
-        cout<< "2.Nooooooooooooo"<< endl;
+        cout<< "Any other key.Nooooooooooooo"<< endl;
         cin >> select;
 
         } while(select==1);
         break;
 
         case 2:
-
+            cout <<"Why do you select slot machine, just to try?, dont be rude the machine have feelings too"<< endl,
+            cout <<"Bro respect"<< endl;
         break;
 
         case 3:
-
+            cout <<"Be free my little ludopatus"<< endl;
         break;
 
         default:
-
+            cout <<"ERROR balatro balatrez is playing balatro"<< endl;
         break;
     }
 
