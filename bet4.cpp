@@ -5,6 +5,11 @@
 
 using namespace std;
 
+struct Usuario{
+    string nombre;
+    int edad;
+};
+
 struct Carta{
     string nombre;
     int valor;
@@ -43,49 +48,50 @@ int totalJugador = 0 , totalBanca =0;
 int i, modo;
 float saldo, saldPerdido, saldGanado, apuesta;
 char jugarDeNuevo;
-string nombreDeusuario, edadDeusuario;
+string nombreDeusuario;
+
 
 cout << "Bienvenido al casino Bet++, donde convertimos ludopatas en millonario o en ludopobres."<<endl;
 
-cout << "Por favor, ingrese un nombre de usuario para continuar:";
-getline (cin, nombreDeusuario);
+void agregarUsuario() ;
+    Usuario c;
+    cout << "Nombre de usuario:";
+    cin >> c.nombre;
+    cout << "Edad de usuario:";
+    cin >> c.edad;
+    
 
-cout << "Por favor, ingrese su edad:";
-getline (cin, edadDeusuario);
-if (edadDeusuario.empty()){
-    cout << "La edad no puede estar vacia. Por favor, ingrese su edad." << endl;
-    return 0;
-}
-ofstream archivoEdad ("edad.txt");
-if (archivoEdad.is_open()){
-    archivoEdad << "Edad del usuario" " " << edadDeusuario << endl;
-    archivoEdad.close();
-    cout << "La edad del usuario ha sido guardada exitosamente." " " <<endl;
-}else {
-    cout << "Error al abrir el archivo para guardar la edad del usuario." << endl;
-}
-if (edadDeusuario < "18"){
-    cout << "Lo sentimos, debes de ser mayor de 18 años de edad para jugar en Bet++." << endl;
-    return 0;
-}
-
-
-
-ofstream archivo ("usuario.txt");
+ofstream archivo ("Usuario.txt",ios::app);
 if (archivo.is_open()){
-    archivo << "Bienvenido al casino Bet++" " " << nombreDeusuario << endl;
+    archivo << c.nombre << endl;
     archivo.close();
-    cout << "El nombre de usuario ha sido guardado exitosamente," " " << nombreDeusuario << " " ",gracias" <<endl;
+    cout << "Nombre de susario guardado exitosamente"<< c.nombre << "gracias" << endl;
+}else{
+    cout << "El nombre no se pudo guardar" << endl;
+}
+ofstream archivoEdad ("Edad.txt");
+if (c.edad < 18){
+    cout << "La edad minima para ingresar es de 18. Lo sentimos."<< endl;
+    return 0;
+}
+if (archivoEdad.is_open()){
+    archivoEdad << c.edad << endl;
+    archivoEdad.close();
+    cout << "Edad guardada exitosamente"<<endl;
+
 }else {
-    cout << "Error al abrir el archivo para guardar el nombre de usuario." << endl;
+    cout << "La edad no pudo ser registrada" << endl;
 }
 
 
 
 cout << "Por favor ingrese el monoto de efectivo que desea utilizar (SALDO MINIMO REQUERIDO $100) "<<endl;
 cin >> saldo;
-if (saldo >= 100 && saldo <=200 ){
-    cout <<"Por lo visto es tu primera vez en las Bet++. Bienvenido al mejor casino de apuestas online"<<endl;
+if (saldo < 100 ){
+    cout <<"El saldo minimo requerido es de $100 para jugar. ADIOS ;)"<<endl;
+    return 0;
+}else if (saldo >= 100 && saldo <=200){
+    cout << "Por lo visto es tu primera vez en las Bet++. Bienvenido al mejor casino de apuestas online" <<endl;
 }
 else if (saldo >= 200 && saldo < 300){
     cout <<"¡Estas apostando cantidades grandes!, Esperamos y no las pierdas"<<endl;
@@ -230,21 +236,6 @@ srand(time(0));
     cout << "Gracias por jugar en Bet++! Tu saldo final es: $" << saldo << endl;
     
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     return 0;
