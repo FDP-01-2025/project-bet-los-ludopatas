@@ -234,9 +234,6 @@ srand(time(0));
     } while (jugarDeNuevo == 's' || jugarDeNuevo == 'S');
 
     cout << "Gracias por jugar en Bet++! Tu saldo final es: $" << saldo << endl;
-    
-    
-
 
     return 0;
 }
