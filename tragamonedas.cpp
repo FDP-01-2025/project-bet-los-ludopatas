@@ -10,17 +10,21 @@ void difficult_malphite();
 
 int main (){
     int select;
-    cout<<"Do you want to spin the slot machine?"<< endl;
-    cout<<"1.Yes, of course sir, the ludopathy has consumed me and my saves too(jijijaja)"<< endl;
-    cout<<"2.Nao, im free, i dont need balatro balatro anymore"<< endl;
+    cout<<"================================ SPIN MACHINE MENU ================================"<< endl;
+    cout<<"||                 Do you want to spin the slot machine?                         ||"<< endl;
+    cout<<"|| 1.Yes, of course sir, the ludopathy has consumed me and my saves too(jijijaja)||"<< endl;
+    cout<<"|| 2.Nao, im free, i dont need balatro balatro anymore                           ||"<< endl;
+    cout<<"==================================================================================="<< endl;
     cin >> select;
 
     switch(select){
         case 1:
-            cout<<"Select your difficult:"<< endl;
-            cout <<"1.Fear of bet (An easy way to win but you dont win too much)"<< endl;
-            cout <<"2.Normal (A normal slot machine experience)"<< endl;
-            cout <<"3.GO FOR THE BIG SHOOOT(nOt ToO MUCH P0S1BiLLIes tOO W1n but YOU can WIN A LOT OF MONEY)"<< endl;
+            do{
+            cout <<"================================== Select your difficult ==================================="<< endl;
+            cout <<"||1.Fear of bet (An easy way to win but you dont win too much)                            ||"<< endl;
+            cout <<"||2.Normal (A normal slot machine experience)                                             ||"<< endl;
+            cout <<"||3.GO FOR THE BIG SHOOOT(nOt ToO MUCH P0S1BiLLIes tOO W1n but YOU can WIN A LOT OF MONEY)||"<< endl;
+            cout <<"============================================================================================"<< endl;
             cin >> select;
             switch(select){
                 case 1:
@@ -36,27 +40,36 @@ int main (){
                 break;
 
                 default:
-                    cout <<"ERROR"<< endl;
+                    cout <<"========================================="<< endl;
+                    cout <<"||ERROR, PLEASE DONT TEST MORE THE CODE||"<< endl;
+                    cout <<"========================================="<< endl;
                 break;
             }
+            cout <<"Spin again?"<<endl;
+            cout <<"1.Yes"<< endl;
+            cout <<"2.No"<< endl;
+            cin >> select;
+            } while(select != 2);
         break;
 
         case 2:
-            cout <<"Why do you select slot machine, just to try?, dont be rude the machine have feelings too"<< endl,
-            cout <<"Bro respect"<< endl;
+            cout <<"============================================================================================"<< endl;
+            cout <<"||Why do you select slot machine, just to try?, dont be rude the machine have feelings too||"<< endl,
+            cout <<"||Bro respect                                                                             ||"<< endl;
+            cout <<"============================================================================================"<< endl;
         break;
 
         default:
-            cout <<"ERROR balatro balatrez is playing balatro"<< endl;
+            cout <<"============================================="<< endl;
+            cout <<"||ERROR balatro balatrez is playing balatro||"<< endl;
+            cout <<"============================================="<< endl;
         break;
     }
-
     return 0;
 }
 
     void difficult_easy(){
-        int matrix[3][3], option;
-        do{
+        int matrix[3][3];
         std::mt19937 rng(static_cast<unsigned int>(time(nullptr))); 
         std::uniform_int_distribution<int> range(1,7);
 
@@ -78,17 +91,10 @@ int main (){
         } else {
             cout <<"U lost, jijija"<< endl;
         }
-        
-        cout <<"Spin again?"<<endl;
-        cout <<"1.Yes"<< endl;
-        cout <<"2.No"<< endl;
-        cin >> option;
-    }while(option != 2);
     }
      
 void difficult_mid(){
-    int matrix[3][3], option;
-    do{
+    int matrix[3][3];
     std::mt19937 rng(static_cast<unsigned int>(time(nullptr))); /*La libreria "random" incluye una variedad de motores para generar numeros aleatorios
     , este es uno de ellos, el static cast lo ocupamos para que nos devuelva el valor que nos de time (nullptr)
     como un entero, y siendo time (nullptr) la cantidad de segundos actuales desde su creacion, por lo que su valor esta en constante cambio */
@@ -112,16 +118,10 @@ void difficult_mid(){
     } else {
         cout <<"U lost, jijija"<< endl;
         }
-    cout <<"Spin again?"<<endl;
-        cout <<"1.Yes"<< endl;
-        cout <<"2.No"<< endl;
-        cin >> option;
-    }while(option!=2);
 }
 
 void difficult_malphite(){
-    int matrix[3][3], option;
-    do{
+    int matrix[3][3];
     std::mt19937 rng(static_cast<unsigned int>(time(nullptr))); 
     std::uniform_int_distribution<int> range(1,15);
 
@@ -143,10 +143,4 @@ void difficult_malphite(){
     } else {
         cout <<"U lost, jijija"<< endl;
     }
-    cout <<"Spin again?"<<endl;
-        cout <<"1.Yes"<< endl;
-        cout <<"2.No"<< endl;
-        cin >> option;
-    }while( option !=2);
 }
-
