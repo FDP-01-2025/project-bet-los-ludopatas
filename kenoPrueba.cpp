@@ -203,6 +203,7 @@ void jugarKenoSolo()
         porcentaje = 25;
     else if (aciertos <= 7)
         porcentaje = 50;
+        
     else // 8 a 10 aciertos
         porcentaje = 100;
 
