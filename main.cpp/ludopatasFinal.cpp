@@ -99,11 +99,15 @@ float readSafeFloat(string message, float min = -FLT_MAX, float max = FLT_MAX) {
         if (cin.fail()) {
             clearBuffer();
             setColor(ERROR_COLOR);
-            cout << "Invalid input. Try again.\n";
+            cout << "Invalid input. Please enter a valid number.\n";
             setColor(DEFAULT_COLOR);
-        } else if (value < min || value > max) {
+        } else if (value < min) {
             setColor(ERROR_COLOR);
-            cout << "Value out of range (" << min << "-" << max << "). Try again.\n";
+            cout << "Value too small. Minimum allowed is " << min << ". Try again.\n";
+            setColor(DEFAULT_COLOR);
+        } else if (value > max) {
+            setColor(ERROR_COLOR);
+            cout << "Value too large. Maximum allowed is " << max << ". Try again.\n";
             setColor(DEFAULT_COLOR);
         } else {
             clearBuffer();
