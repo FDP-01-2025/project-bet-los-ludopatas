@@ -198,13 +198,13 @@ void playRoulette(float& balance) {
         cout << "\n╔══════════════════════════════╗" << endl;
         cout << "║         ROULETTE MENU        ║" << endl;
         cout << "╠══════════════════════════════╣" << endl;
-        cout << "║ 1. Bet by color              ║" << endl;
-        cout << "║ 2. Bet by range              ║" << endl;
-        cout << "║ 3. Bet by number             ║" << endl;
+        cout << "║ 1. Bet by color (Easy 50%)   ║" << endl;
+        cout << "║ 2. Bet by range (Medium 33%) ║" << endl;
+        cout << "║ 3. Bet by number (Hard 2.70%)║" << endl;
         cout << "║ 4. Return to main menu       ║" << endl;
         cout << "╚══════════════════════════════╝" << endl;
         setColor(DEFAULT_COLOR);
-
+        
         option = readSafeInt("Select an option: ", 1, 4);
 
         switch (option) {
@@ -223,57 +223,6 @@ void playRoulette(float& balance) {
 
         continuePlaying = readSafeChar("Do you want to place another bet? (y/n): ");
     } while (continuePlaying == 'y');
-}
-
-// Función para modo multijugador
-void multiplayerRoulette() {
-    int numPlayers;
-    do {
-        setColor(INFO_COLOR);
-        cout << "Enter number of players (2 to 4): ";
-        setColor(DEFAULT_COLOR);
-        cin >> numPlayers;
-        clearBuffer();
-
-        if (numPlayers < 2 || numPlayers > 4) {
-            setColor(ERROR_COLOR);
-            cout << "Invalid number of players." << endl;
-            setColor(DEFAULT_COLOR);
-        }
-    } while (numPlayers < 2 || numPlayers > 4);
-
-    float balances[4];
-    for (int i = 0; i < numPlayers; ++i) {
-        balances[i] = 1000;
-    }
-
-    char keepPlaying = 'y';
-    while (keepPlaying == 'y') {
-        for (int i = 0; i < numPlayers; ++i) {
-            if (balances[i] < 100) {
-                setColor(WARNING_COLOR);
-                cout << "\nPlayer " << (i + 1) << " has insufficient balance to play." << endl;
-                setColor(DEFAULT_COLOR);
-                continue;
-            }
-
-            setColor(CYAN_COLOR);
-            cout << "\n═════════════════════════════════════════" << endl;
-            cout << "       Player " << (i + 1) << "'s Turn – Balance: $" << balances[i] << endl;
-            cout << "═════════════════════════════════════════" << endl;
-            setColor(DEFAULT_COLOR);
-            playRoulette(balances[i]);
-        }
-
-        keepPlaying = readSafeChar("\nDo you want to play another round with all players? (y/n): ");
-    }
-
-    setColor(SUCCESS_COLOR);
-    cout << "\nGame over. Final balances:\n";
-    for (int i = 0; i < numPlayers; ++i) {
-        cout << "Player " << (i + 1) << ": $" << balances[i] << endl;
-    }
-    setColor(DEFAULT_COLOR);
 }
 
 #endif // RULETA_H
