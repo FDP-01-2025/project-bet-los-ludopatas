@@ -955,10 +955,10 @@ void showLoss() {
 void showWin() {
     setColor(SUCCESS_COLOR);
     cout << R"(
-            /\/\__  _   _  __      ()_ __  
-            \_ / _ \| | | | \ \ /\ / / | '  )
-             / | () | || |  \ V  V /| | | | |
-             \/\/ \,|   \/\/ ||| || )" << endl;
+            /\_/\___  _   _  __      _(_)_ __  
+            \_ _/ _ \| | | | \ \ /\ / / | '_  )
+             / | (_) | |_| |  \ V  V /| | | | |
+             \_/\___/ \__,_|   \_/\_/ |_|_| |_|  )" << endl;
     cout << "        You won! (The machine respects you and gives you some money)" << endl;
     setColor(DEFAULT_COLOR);
 }
@@ -970,12 +970,12 @@ void showJackpot() {
     setColor(MAGENTA_COLOR);
     cout << R"(
               __             _                _   
-              \ \  __ _  __| | ___ __   ___ | | 
-               \ \/ ` |/ __| |/ / ' \ / _ \| __|
-            /\/ / (| | (|   <| |) | () | |_ 
-            \/ \,|\||\\ ./ \/ \|
+              \ \  __ _  ___| | ___ __   ___ | |_ 
+               \ \/ _` |/ __| |/ / '_ \ / _ \| __|
+            /\_/ / (_| | (__|   <| |_) | (_) | |_ 
+            \___/ \__,_|\___|_|\_\ .__/ \___/ \__|
                                  |_|)" << endl;
-    cout << "JACKPOT! You win the grand prize!" << endl;
+    cout << "        JACKPOT! You win the grand prize!" << endl;
     setColor(DEFAULT_COLOR);
 }
 

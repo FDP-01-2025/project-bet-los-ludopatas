@@ -838,10 +838,10 @@ void mostrarPerdida() {
 void mostrarVictoria() {
     setColor(COLOR_SUCCESS);
     cout << R"(
-            /\/\__  _   _  __      ()_ __  
-            \_ / _ \| | | | \ \ /\ / / | '  )
-             / | () | || |  \ V  V /| | | | |
-             \/\/ \,|   \/\/ ||| || )" << endl;
+            /\_/\___  _   _  __      _(_)_ __  
+            \_ _/ _ \| | | | \ \ /\ / / | '_  )
+             / | (_) | |_| |  \ V  V /| | | | |
+             \_/\___/ \__,_|   \_/\_/ |_|_| |_| )" << endl;
     cout << "        ¡Ganaste! (La máquina te respeta y algo de dinero)" << endl;
     setColor(COLOR_DEFAULT);
 }
@@ -850,12 +850,12 @@ void mostrarJackpot() {
     setColor(COLOR_MAGENTA);
     cout << R"(
               __             _                _   
-              \ \  __ _  __| | ___ __   ___ | | 
-               \ \/ ` |/ __| |/ / ' \ / _ \| __|
-            /\/ / (| | (|   <| |) | () | |_ 
-            \/ \,|\||\\ ./ \/ \|
-                                 |_|)" << endl;
-    cout << "¡JACKPOT! ¡Ganas el premio mayor!" << endl;
+              \ \  __ _  ___| | ___ __   ___ | |_ 
+               \ \/ _` |/ __| |/ / '_ \ / _ \| __|
+            /\_/ / (_| | (__|   <| |_) | (_) | |_ 
+            \___/ \__,_|\___|_|\_\ .__/ \___/ \__|
+                                 |_| )" << endl;
+    cout << "        ¡JACKPOT! ¡Ganas el premio mayor!" << endl;
     setColor(COLOR_DEFAULT);
 }
 

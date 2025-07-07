@@ -91,7 +91,7 @@ int main (){
             cout << endl;
         }
         cout << endl;
-
+        // this if is for declare the condicition to win
         if ((matrix[0][0] == matrix[1][1] and matrix[1][1] == matrix[2][2]) or (matrix[1][0] == matrix[1][1] and matrix[1][1] == matrix[1][2]) or (matrix[2][0] == matrix[1][1] and matrix[1][1] == matrix[0][2])){
             cout << R"(
             /\_/\___  _   _  __      _(_)_ __  
@@ -149,7 +149,7 @@ void difficultyMid(){
 
     string symbols[8] = {"", u8"🃏", u8"👑", u8"✨", u8"💎", u8"💍", u8"💰", u8"7️⃣ "};
     cout <<"======================================================================="<< endl;
-    cout <<"The result is:"<< endl;
+    cout <<"The result is..."<< endl;
     cout << endl;
 
     for (int i = 0; i<3; i++){
@@ -170,7 +170,7 @@ void difficultyMid(){
                \ \/ _` |/ __| |/ / '_ \ / _ \| __|
             /\_/ / (_| | (__|   <| |_) | (_) | |_ 
             \___/ \__,_|\___|_|\_\ .__/ \___/ \__|
-                                 |_|)"<< endl; //apparently the R"()" is use to put ascii art cuz this allow you to put exactly the same text that you putted inside including the jump of the lines
+                                 |_|)"<< endl; 
             cout <<"======================================================================="<< endl;
             }else{
             cout << R"(
@@ -227,7 +227,7 @@ void difficultyMalphite(){
 
     string symbols[11] = {"", u8"🃏", u8"👑", u8"✨", u8"💎", u8"💍", u8"💰", u8"7️⃣ ", u8"🔔", u8"🍀", u8"🗿"};
     cout <<"======================================================================="<< endl;
-    cout <<"The result is:"<< endl;
+    cout <<"The result is..."<< endl;
     cout << endl;
 
     for (int i = 0; i<3; i++){
@@ -248,7 +248,7 @@ void difficultyMalphite(){
                \ \/ _` |/ __| |/ / '_ \ / _ \| __|
             /\_/ / (_| | (__|   <| |_) | (_) | |_ 
             \___/ \__,_|\___|_|\_\ .__/ \___/ \__|
-                                 |_|)"<< endl; //apparently the R"()" is use to put ascii art cuz this allow you to put exactly the same text that you putted inside including the jump of the lines
+                                 |_|)"<< endl; 
             cout <<"======================================================================="<< endl;
             }else{
             cout << R"(
@@ -298,7 +298,7 @@ void difficultyMalphite(){
     }
 }
 
-void waitASecond(double t){
+void waitASecond(double t){ //this function is to add tension in the moment when you spin
   time_t timer = time(nullptr);
   while(time(nullptr) - timer < t);
 }
