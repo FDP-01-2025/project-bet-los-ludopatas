@@ -610,9 +610,9 @@ void playRoulette(float& balance) {
         cout << "\n╔══════════════════════════════╗" << endl;
         cout << "║         ROULETTE MENU        ║" << endl;
         cout << "╠══════════════════════════════╣" << endl;
-        cout << "║ 1. Bet by color              ║" << endl;
-        cout << "║ 2. Bet by range              ║" << endl;
-        cout << "║ 3. Bet by number             ║" << endl;
+        cout << "║ 1. Bet by color (Easy)       ║" << endl;
+        cout << "║ 2. Bet by range (Medium)     ║" << endl;
+        cout << "║ 3. Bet by number (Hard)      ║" << endl;
         cout << "║ 4. Return to main menu       ║" << endl;
         cout << "╚══════════════════════════════╝" << endl;
         setColor(DEFAULT_COLOR);
