@@ -1,0 +1,112 @@
+/*
+ 
+ * 
+ * Este programa implementa un casino virtual con varios juegos:
+ * - Blackjack (solitario y multijugador)
+ * - Ruleta
+ * - Keno
+ * - Máquinas tragamonedas
+ * 
+ * Autores:  García Osorio, Eduardo Daniel.
+   *Carnet:* 00014325
+
+2. *Nombre completo:* Girón Vigil, Saul Ernesto,00033325
+   *Carnet:* 00033325
+
+3. *Nombre completo:* Armando José Iglesias Aguilera
+   *Carnet:* 00107425
+
+4. *Nombre completo:* Alfredo Antonio Guarita Hernandez
+   *Carnet:* ,00155425
+
+]
+ * Fecha: [6 de julio de 2025]
+ * Versión: 1.0 (esperamos que no sea la última :D)
+ */
+// * Casino Bet++ - Bet++ no es solo un juego de casino, es la emoción de arriesgar, la astucia del jugador y la adrenalina del todo o nada, envueltos en líneas de código que laten como un corazón apostador."
+
+// ================== LIBRERÍAS NECESARIAS ================== //
+
+
+#include "librerias.h"
+#include "estructuras.h" 
+#include "colors.h"
+#include "blackJack.h"
+#include "ruleta.h"
+#include "keno.h"
+#include "tragaMonedas.h"
+    
+
+using namespace std;
+
+// ================== MENÚ PRINCIPAL ================== //
+
+
+
+// Función principal del programa
+int main() {
+    srand(time(NULL));
+    
+    SetConsoleOutputCP(CP_UTF8);
+    
+    setColor(INFO_COLOR);
+    cout << "Welcome to Bet++, the casino where we turn gamblers into millionaires... or gambling poor.\n";
+    setColor(DEFAULT_COLOR);
+
+    User user;
+    cout << "Username: ";
+    getline(cin, user.name);
+    user.age = readSafeInt("Age: ", 1, 120);
+
+    if (user.age < 18) {
+        setColor(ERROR_COLOR);
+        cout << "You must be at least 18 years old to play.\n";
+        setColor(DEFAULT_COLOR);
+        return 0;
+    }
+
+    float balance = readSafeFloat("Enter your initial balance (minimum $100): $", 100);
+
+    char keepPlaying = 'y';
+    while (keepPlaying == 'y') {
+        setColor(INFO_COLOR);
+        cout << "\n-------------------------------\n";
+        cout << "|      MAIN MENU              |\n";
+        cout << "|-----------------------------|\n";
+        cout << "| 1. Single Player Blackjack  |\n";
+        cout << "| 2. Multiplayer Blackjack    |\n";
+        cout << "| 3. Roulette                 |\n";
+        cout << "| 4. Keno                     |\n";
+        cout << "| 5. Slot Machine             |\n";
+        cout << "| 6. Exit                     |\n";
+        cout << "-------------------------------\n";
+        setColor(DEFAULT_COLOR);
+        
+        int option = readSafeInt("Select an option: ", 1, 6);
+        
+        switch (option) {
+            case 1: playSingleBlackjack(balance); break;
+            case 2: playMultiplayerBlackjack(); break;
+            case 3: playRoulette(balance); break;
+            case 4: playKeno(balance); break;
+            case 5: playSlots(balance); break;
+            case 6: 
+                cout << "Thanks for playing at Bet++, " << user.name << ". See you next time!\n";
+                return 0;
+        }
+
+        if (balance < 100) {
+            setColor(ERROR_COLOR);
+            cout << "\nInsufficient balance to keep playing.\n";
+            setColor(DEFAULT_COLOR);
+            break;
+        }
+
+        keepPlaying = readSafeChar("\nDo you want to return to the main menu? (y/n): ");
+    }
+
+    setColor(INFO_COLOR);
+    cout << "\nThanks for playing at Bet++, " << user.name << ". Come back soon!\n";
+    setColor(DEFAULT_COLOR);
+    return 0;
+}
