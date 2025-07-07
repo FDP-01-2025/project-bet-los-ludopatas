@@ -40,18 +40,21 @@ Card generateCard() {
 // Implementación del Blackjack multijugador (2-5 jugadores)
 void playMultiplayerBlackjack() {
     int numPlayers = readSafeInt("Enter number of players (2-5): ", 2, 5);
-    vector<Player> players(numPlayers);
-    
-    for (int i = 0; i < numPlayers; i++) {
-        cout << "\nPlayer " << i + 1 << " data:\n";
-        cout << "Name: ";
-        cin.ignore();
-        getline(cin, players[i].name);
-        players[i].balance = readSafeFloat("Initial balance (minimum $100): $", 100);
-        players[i].total = 0;
-        players[i].aces = 0;
-        players[i].eliminated = false;
-    }
+vector<Player> players(numPlayers);
+
+//  Limpiar el búfer antes de usar getline para los nombres
+cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+for (int i = 0; i < numPlayers; i++) {
+    cout << "\nPlayer " << i + 1 << " data:\n";
+    cout << "Name: ";
+    getline(cin, players[i].name);  // ← No se interrumpirá, tomará el nombre completo
+    players[i].balance = readSafeFloat("Initial balance (minimum $100): $", 100);
+    players[i].total = 0;
+    players[i].aces = 0;
+    players[i].eliminated = false;
+}
+
 
     for (int i = 0; i < numPlayers; i++) {
         cout << "\n" << players[i].name << "'s betting turn (Balance: $" << players[i].balance << ")\n";
