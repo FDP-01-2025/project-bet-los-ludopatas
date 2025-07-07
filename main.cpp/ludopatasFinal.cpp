@@ -181,12 +181,13 @@ Card generateCard() {
 void playMultiplayerBlackjack() {
     int numPlayers = readSafeInt("Enter number of players (2-5): ", 2, 5);
     vector<Player> players(numPlayers);
-    
+
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Limpiar buffer UNA vez antes de getline
+
     for (int i = 0; i < numPlayers; i++) {
         cout << "\nPlayer " << i + 1 << " data:\n";
         cout << "Name: ";
-        cin.ignore();
-        getline(cin, players[i].name);
+        getline(cin, players[i].name);  // Usa getline para nombres completos sin errores
         players[i].balance = readSafeFloat("Initial balance (minimum $100): $", 100);
         players[i].total = 0;
         players[i].aces = 0;
@@ -278,7 +279,6 @@ void playMultiplayerBlackjack() {
                 totalPrize += players[i].bet;
             }
         }
-        
         players[winners[0]].balance += totalPrize;
     } else {
         setColor(TIE_COLOR);
@@ -289,7 +289,7 @@ void playMultiplayerBlackjack() {
         }
         cout << " with " << maxPoints << " points!\n";
         setColor(DEFAULT_COLOR);
-        
+
         for (int i = 0; i < winners.size(); i++) {
             players[winners[i]].balance += players[winners[i]].bet;
         }
@@ -300,6 +300,8 @@ void playMultiplayerBlackjack() {
         cout << players[i].name << ": $" << players[i].balance << endl;
     }
 }
+
+
 
 // Implementación del Blackjack solitario (contra la banca)
 void playSingleBlackjack(float& balance) {
