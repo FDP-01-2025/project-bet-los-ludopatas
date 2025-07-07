@@ -82,6 +82,7 @@ También se hace uso de bucles anidados para comparar ambos vectores y determina
 if – else
 Se utiliza para tomar decisiones en el flujo del programa.
 ![image](https://github.com/user-attachments/assets/ac093c6a-8c33-4703-bc8e-3e1bdda7ced6)
+
 switch – case
 Sirve para gestionar menús y opciones múltiples de forma estructurada.
 
