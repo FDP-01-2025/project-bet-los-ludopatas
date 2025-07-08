@@ -1251,21 +1251,33 @@ void playSlots(float& balance) {
 // Función principal del programa
 int main() {
     srand(time(NULL));
-    
     SetConsoleOutputCP(CP_UTF8);
-    
+
     setColor(INFO_COLOR);
-    cout << "Welcome to Bet++, the casino where we turn gamblers into millionaires... or gambling poor.\n";
+    cout << R"(
+╔════════════════════════════════════════════════╗
+║                                                ║
+║                   🂠 🂠 🂠                       ║
+║                BET++ CASINO                    ║
+║                   🂠 🂠 🂠                       ║
+║                                                ║
+║      Where we turn gamblers into millionaires  ║
+║                 ...or gambling poor.           ║
+║                                                ║
+╚════════════════════════════════════════════════╝
+)" << endl;
     setColor(DEFAULT_COLOR);
 
+    cout << "\nWelcome to Bet++, the casino where we turn gamblers into millionaires... or gambling poor.\n";
+
     User user;
-    cout << "Username: ";
+    cout << "\nUsername: ";
     getline(cin, user.name);
     user.age = readSafeInt("Age: ", 1, 120);
 
     if (user.age < 18) {
         setColor(ERROR_COLOR);
-        cout << "You must be at least 18 years old to play.\n";
+        cout << "\nYou must be at least 18 years old to play.\n";
         setColor(DEFAULT_COLOR);
         return 0;
     }
@@ -1274,29 +1286,34 @@ int main() {
 
     char keepPlaying = 'y';
     while (keepPlaying == 'y') {
-        setColor(INFO_COLOR);
-        cout << "\n-------------------------------\n";
-        cout << "|      MAIN MENU              |\n";
-        cout << "|-----------------------------|\n";
-        cout << "| 1. Single Player Blackjack  |\n";
-        cout << "| 2. Multiplayer Blackjack    |\n";
-        cout << "| 3. Roulette                 |\n";
-        cout << "| 4. Keno                     |\n";
-        cout << "| 5. Slot Machine             |\n";
-        cout << "| 6. Exit                     |\n";
-        cout << "-------------------------------\n";
+        system("cls");
+        setColor(CYAN_COLOR);
+        cout << R"(
+╔══════════════════════════════════════════════════════╗
+║                     MAIN MENU                        ║
+╠══════════════════════════════════════════════════════╣
+║  1. Single Player Blackjack    🂠 🂡 🂢                ║
+║  2. Multiplayer Blackjack      🂣 🂤 🂥                ║
+║  3. Roulette                   🎡                   ║
+║  4. Keno                       🎯                   ║
+║  5. Slot Machine               🎰                   ║
+║  6. Exit                       🚪                    ║
+╚══════════════════════════════════════════════════════╝
+)" << endl;
         setColor(DEFAULT_COLOR);
-        
-        int option = readSafeInt("Select an option: ", 1, 6);
-        
+
+        int option = readSafeInt("\nSelect an option: ", 1, 6);
+
         switch (option) {
             case 1: playSingleBlackjack(balance); break;
             case 2: playMultiplayerBlackjack(); break;
             case 3: playRoulette(balance); break;
             case 4: playKeno(balance); break;
             case 5: playSlots(balance); break;
-            case 6: 
-                cout << "Thanks for playing at Bet++, " << user.name << ". See you next time!\n";
+            case 6:
+                setColor(MAGENTA_COLOR);
+                cout << "\nThanks for playing at Bet++, " << user.name << ". See you next time!\n";
+                setColor(DEFAULT_COLOR);
                 return 0;
         }
 
