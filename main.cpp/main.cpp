@@ -7,16 +7,17 @@
  * - Keno
  * - Máquinas tragamonedas
  * 
- * Autores:  García Osorio, Eduardo Daniel.
+ * Autores:  
+ 1.García Osorio, Eduardo Daniel.
    *Carnet:* 00014325
 
-2. *Nombre completo:* Girón Vigil, Saul Ernesto,00033325
+2.  Girón Vigil, Saul Ernesto,00033325
    *Carnet:* 00033325
 
-3. *Nombre completo:* Armando José Iglesias Aguilera
+3. Armando José Iglesias Aguilera
    *Carnet:* 00107425
 
-4. *Nombre completo:* Alfredo Antonio Guarita Hernandez
+4.  Alfredo Antonio Guarita Hernandez
    *Carnet:* ,00155425
 
 ]
