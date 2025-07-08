@@ -11,7 +11,7 @@ La ambientación se enfoca en brindar al usuario una variedad de modos de juego 
 Esta diversidad permite una experiencia más rica, entretenida y cercana a un casino real, dentro de un entorno digital simple y accesible.
 
 
-🧠  Mecánica Principal del Juego
+🧠  # Mecánica Principal del Juego
 
 If-else: Determina si hay combinaciones ganadoras también maneja la lógica del juego y las decisiones del jugador.
 
