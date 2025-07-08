@@ -148,51 +148,44 @@ También se hace uso de bucles anidados para comparar ambos vectores y determina
 
  Aplicación de los temas vistos
  
-if – else
-
+**if – else: **
 Se utiliza para tomar decisiones en el flujo del programa.
 
 ![image](https://github.com/user-attachments/assets/3b68b725-4894-45c8-92b7-7d8caef4e208)
 
 
-switch – case
-
-Sirve para gestionar menús y opciones múltiples de forma estructurada.
+**switch – case:**
+ Sirve para gestionar menús y opciones múltiples de forma estructurada.
  
 ![image](https://github.com/user-attachments/assets/4eb8ac60-5097-41f5-9e49-fbfa64c915c8)
 
 
-For
-
-Se usa para recorrer arreglos y vectores.
+**For:**
+ Se usa para recorrer arreglos y vectores.
 
 ![image](https://github.com/user-attachments/assets/3e0ef574-62f6-421b-b45e-9910a67bf896)
 
 
-while y do-while
-
-Se aplican en validaciones y repeticiones hasta que se cumpla una condición válida.
+**while y do-while:**
+ Se aplican en validaciones y repeticiones hasta que se cumpla una condición válida.
 
 ![image](https://github.com/user-attachments/assets/f47aefe4-d942-4334-84f1-8702d6661e75)
 
  
-Funciones
-
-El código está dividido en funciones para organizar mejor el flujo.
+**Funciones:**
+ El código está dividido en funciones para organizar mejor el flujo.
 
 ![image](https://github.com/user-attachments/assets/c2c20f3c-823d-4306-be0d-e761a98cd079)
 
  
-Estructuras
-
-Sirven para agrupar datos relacionados de un jugador.
+**Estructuras:**
+ Sirven para agrupar datos relacionados de un jugador.
  
 ![image](https://github.com/user-attachments/assets/2c85700d-6c6b-42f1-8756-27dae853458f)
 
 
-Matrices
-
-Se utilizan para almacenar datos en forma de tabla, es decir, en filas y columnas.
+**Matrices:**
+ Se utilizan para almacenar datos en forma de tabla, es decir, en filas y columnas.
  
 ![image](https://github.com/user-attachments/assets/ff83a17a-2f7d-4fb0-afce-024b50cfc6bb)
 
