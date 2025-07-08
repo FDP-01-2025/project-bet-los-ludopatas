@@ -20,7 +20,7 @@
    *Carnet:* ,00155425
 
 ]
- * Fecha: [6 de julio de 2025]
+ * Fecha: [8 de julio de 2025]
  * Versión: 1.0 (esperamos que no sea la última :D)
  */
 // * Casino Bet++ - Bet++ no es solo un juego de casino, es la emoción de arriesgar, la astucia del jugador y la adrenalina del todo o nada, envueltos en líneas de código que laten como un corazón apostador."
