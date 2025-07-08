@@ -96,14 +96,14 @@ Validaciones adicionales:
 •	Control de entradas erróneas (caracteres no numéricos, vacíos, fuera de rango).
 
 
-🧩 Estructura general del juego
+# 🧩 Estructura general del juego
 
 El juego comienza solicitando información básica del usuario o usuarios, como nombre, edad y saldo inicial. Se valida que todos los jugadores sean mayores de edad (18+) y que posean un saldo positivo para ingresar al casino. Esta verificación se realiza mediante funciones que controlan los datos ingresados y previenen errores o comportamientos no deseados, aplicando ciclos do-while y estructuras condicionales.
 
 El núcleo del sistema está compuesto por funciones separadas para cada parte lógica del juego. Esto permite una organización clara y escalable, respetando principios de programación estructurada. Además, se utilizan switch-case para navegación de menús, vectores y arreglos para manejar datos internos (como cartas o combinaciones) y funciones auxiliares para validación y presentación visual.
 
 
-🎰 Descripción de los modos de juego
+# 🎰 Descripción de los modos de juego
 
 
 🎯 1. Ruleta 
@@ -146,7 +146,7 @@ Se utiliza la función rand() para la generación aleatoria y vectores para mane
 También se hace uso de bucles anidados para comparar ambos vectores y determinar la cantidad de aciertos.
 
 
- Aplicación de los temas vistos
+ # Aplicación de los temas vistos
  
 **if – else: **
 Se utiliza para tomar decisiones en el flujo del programa.
@@ -190,7 +190,7 @@ Se utiliza para tomar decisiones en el flujo del programa.
 ![image](https://github.com/user-attachments/assets/ff83a17a-2f7d-4fb0-afce-024b50cfc6bb)
 
 
-Consideraciones técnicas del Desarrollo
+# Consideraciones técnicas del Desarrollo
 
 **Modularización del código:** 
 Todo el proyecto se dividió en funciones específicas para cada tarea: validar datos, ejecutar cada juego, mostrar menús, aplicar colores, calcular ganancias, etc
