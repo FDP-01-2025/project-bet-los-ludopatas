@@ -10,11 +10,17 @@ La ambientación se enfoca en brindar al usuario una variedad de modos de juego 
 Esta diversidad permite una experiencia más rica, entretenida y cercana a un casino real, dentro de un entorno digital simple y accesible.
 
 🧠 Mecánica Principal del Juego
+
 If-else: Determina si hay combinaciones ganadoras también maneja la lógica del juego y las decisiones del jugador.
+
 While: Mantiene el juego en ejecución hasta que el jugador se quede sin créditos o desea salir. 
+
 Switch-case: maneja el menú de opciones (jugar, ver créditos, salir).
+
 For: Tiene diverso papel en cada modo de juego en blackjack es encargado de repartir las cartas. En tragamonedas generar 3 símbolos aleatorios en los rodillos. En keno se utiliza para que el jugador elija 5 números (validando cada uno). mostrar los números sorteados.
+
 Arreglos: para almacenar y manipular datos, como las cartas en un mazo o los símbolos en una tragaperras.
+
 vectores: Para listas dinámicas como cartas en mano (Blackjack), selección de números (Keno), o historial de resultados.
 
 Librerías utilizadas:
