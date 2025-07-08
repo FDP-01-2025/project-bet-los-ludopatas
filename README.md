@@ -201,18 +201,25 @@ Consideraciones técnicas del Desarrollo
 
 Modularización del código: 
 Todo el proyecto se dividió en funciones específicas para cada tarea: validar datos, ejecutar cada juego, mostrar menús, aplicar colores, calcular ganancias, etc
+
 Validación de entradas: 
-Para evitar errores o que el programa se crashee, se implementaron funciones como validarEntero() y validarFlotante(), que aseguran que el usuario ingrese datos numéricos dentro de un rango permitido. También se verifica la edad del jugador y que el saldo y las apuestas sean válidas
+Para evitar errores o que el programa se crashee, se implementaron funciones como validarEntero() y validarFlotante(), que aseguran que el usuario ingrese datos numéricos dentro de un rango permitido. También se verifica la edad del jugador y que el saldo y las apuestas sean válidas.
+
 Uso de estructuras para jugadores: 
 Se definió una estructura Jugador para almacenar nombre, edad y saldo. Esto permite manejar múltiples usuarios de forma ordenada y asociar sus datos en una sola entidad.
+
 Separación por modos de juego: 
 Cada juego (ruleta, blackjack, tragamonedas, keno) tiene su propia función que encapsula toda su lógica.
+
 Uso de rand() con srand(time(0)): 
 Para asegurar que los resultados de cada juego sean realmente aleatorios.
+
 Mejora visual con setColor() y animaciones: 
 Se empleó windows.h para cambiar el color del texto en consola y se implementaron funciones como simularCargando() para dar una sensación de espera o animación al usuario.
+
 Control de flujo: 
 Se usaron estructuras do-while, while e if-else para manejar correctamente los bucles del menú, las validaciones y las decisiones del juego.
+
 
 ## Equipo
 
