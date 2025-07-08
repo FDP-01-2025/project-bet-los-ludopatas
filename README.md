@@ -13,6 +13,9 @@ Esta diversidad permite una experiencia más rica, entretenida y cercana a un ca
 
 # 🧠 Mecánica Principal del Juego
 
+![image](https://github.com/user-attachments/assets/02dcff03-8632-4bc6-a21a-01ca1028a496)
+
+
 If-else: Determina si hay combinaciones ganadoras también maneja la lógica del juego y las decisiones del jugador.
 
 While: Mantiene el juego en ejecución hasta que el jugador se quede sin créditos o desea salir. 
@@ -76,7 +79,7 @@ Funciones adicionales implementadas:
 •	generarNumerosKeno() / compararNumerosKeno() / calcularGananciaKeno(): Para el juego de Keno.
 
 
-🎨 Elementos visuales (interfaz de consola)
+# 🎨 Elementos visuales (interfaz de consola)
 
 Gráficos en ASCII y UTF-8: Se implementaron funciones como showWin(), showLoss() y showJackpot() que muestran animaciones en arte ASCII para representar de manera visual si el jugador ganó, perdió o consiguió un premio especial.
 
