@@ -278,9 +278,9 @@ desde la página oficial: https://git-scm.com/downloads
 2. Clona este repositorio en tu máquina local: desde la git bash clona este repositorio
    git clone [https://github.com/FDP-01-2025/project-bet-los-ludopatas]
     y luego escribe code . para abrir el visual studio code si lo tienes instalado.
-   
-4. Abrir la terminal  para esto ocupa crt+ñ.
-5. una vez abierto la terminal escribe esto: g++ main.cpp -o programa -I./src (copiar) y presiona Enter
+4. En caso de que code . no funcione buscalo manualmente siguiendo estos pasos: Desde Visual Studio Code abre un nuevo folder, luego dirigete a SYSTEMS (C:) luego a usuarios/pc y busca el repositorio, haz click en abrir carpeta y ya estaria listo.
+5.  abrir la terminal  para esto ocupa crt+ñ.
+6. una vez abierto la terminal escribe esto: g++ main.cpp -o programa -I./src (copiar) y presiona Enter
 luego escribe ./programa.exe en la terminal para crear el archivo.exe (programa.exe)
  ejemplo:
  g++ -o baki ludopatas.cpp
