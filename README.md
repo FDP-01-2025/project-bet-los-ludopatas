@@ -192,6 +192,9 @@ Se utiliza para tomar decisiones en el flujo del programa.
  
 ![image](https://github.com/user-attachments/assets/ff83a17a-2f7d-4fb0-afce-024b50cfc6bb)
 
+#  Flujograma
+![flujograma](https://github.com/user-attachments/assets/44d312d7-4718-4ae7-bbce-1fbdc8fcd839)
+
 
 # Consideraciones técnicas del Desarrollo
 
