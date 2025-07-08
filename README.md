@@ -1,6 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/mi1WNrHU)
 # Proyecto de C++ - Bet++
 Casino bet++
+
 ![image](https://github.com/user-attachments/assets/71b3467a-0bf9-40a0-b14e-1ef08b32d1f1)
 
 El juego Bet++ (Los Ludópatas) se basa en la temática de un casino virtual moderno, diseñado para ofrecer una experiencia de entretenimiento digital que simula dinámicas reales de un casino físico.
