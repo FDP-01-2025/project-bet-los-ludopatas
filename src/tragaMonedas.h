@@ -13,7 +13,8 @@ using namespace std;
 
 using namespace std;
 
-void showLoss() {
+//Muestra un mensaje de derrota con arte ASCII
+void showLoss() { 
     setColor(ERROR_COLOR);
     cout << R"(
                                     ░▒░▒▓▒▒░░░                         
@@ -55,7 +56,7 @@ void showLoss() {
 /*
  * Muestra un mensaje de victoria con arte ASCII
  */
-void showWin() {
+void showWin() { 
     setColor(SUCCESS_COLOR);
     cout << R"(
             /\_/\___  _   _  __      _(_)_ __  
@@ -67,7 +68,7 @@ void showWin() {
 }
 
 /*
- * Muestra un mensaje de jackpot con arte ASCII
+ * Muestra un mensaje de jackpot con arte ASCII solo si la linea ganadora  es igual a 7
  */
 void showJackpot() {
     setColor(MAGENTA_COLOR);
