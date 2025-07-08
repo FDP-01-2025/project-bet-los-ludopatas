@@ -15,17 +15,28 @@ Arreglos: para almacenar y manipular datos, como las cartas en un mazo o los sí
 vectores: Para listas dinámicas como cartas en mano (Blackjack), selección de números (Keno), o historial de resultados.
 
 Librerías utilizadas:
-<iostream>: Entrada y salida de datos.
-<cstdlib>: Generación de números aleatorios con rand().
-<ctime>: Inicialización del generador aleatorio (semilla).
-<vector>: Listas dinámicas de datos.
-<algorithm>: Búsqueda y validación de elementos repetidos.
-<windows.h>: Para cambiar color del texto en consola (SetConsoleTextAttribute).
-<thread> y <chrono>: Para simular tiempos de espera y animaciones (como carga y "giro" de ruleta o tragamonedas).
-<random>: Generación avanzada de números aleatorios.
-<string>: Permite trabajar con cadenas de texto.
-<limits>: Proporciona información sobre los límites numéricos de los tipos de datos primitivos (como int, float, etc.),
-<cfloat>: Contiene constantes que definen los límites y precisión de los tipos de datos de punto flotante (float, double, long double).
+- `<iostream>`: Entrada y salida de datos.
+- 
+- `<cstdlib>`: Generación de números aleatorios con `rand()`.
+- 
+- `<ctime>`: Inicialización del generador aleatorio (semilla).
+- 
+- `<vector>`: Listas dinámicas de datos.
+- 
+- `<algorithm>`: Búsqueda y validación de elementos repetidos.
+- 
+- `<windows.h>`: Para cambiar color del texto en consola (`SetConsoleTextAttribute`).
+- 
+- `<thread>` y `<chrono>`: Para simular tiempos de espera y animaciones (como carga y "giro" de ruleta o tragamonedas).
+- 
+- `<random>`: Generación avanzada de números aleatorios.
+- 
+- `<string>`: Permite trabajar con cadenas de texto.
+- 
+- `<limits>`: Proporciona información sobre los límites numéricos de los tipos de datos primitivos (como `int`, `float`, etc.).
+- 
+- `<cfloat>`: Contiene constantes que definen los límites y precisión de los tipos de datos de punto flotante (`float`, `double`, `long double`).
+
 
 Funciones adicionales implementadas:
 
