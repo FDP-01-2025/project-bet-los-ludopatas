@@ -2,11 +2,13 @@
 # Proyecto de C++ - Bet++
 Casino bet++
 ![image](https://github.com/user-attachments/assets/71b3467a-0bf9-40a0-b14e-1ef08b32d1f1)
+
 El juego Bet++ (Los Ludópatas) se basa en la temática de un casino virtual moderno, diseñado para ofrecer una experiencia de entretenimiento digital que simula dinámicas reales de un casino físico.
 
 La ambientación se enfoca en brindar al usuario una variedad de modos de juego clásicos, como la ruleta, blackjack, tragamonedas y keno, cada modo de juego está pensado para ofrecer una dinámica distinta y mantener la atención del usuario.
 
 Esta diversidad permite una experiencia más rica, entretenida y cercana a un casino real, dentro de un entorno digital simple y accesible.
+
 
 🧠 Mecánica Principal del Juego
 
@@ -21,6 +23,7 @@ For: Tiene diverso papel en cada modo de juego en blackjack es encargado de repa
 Arreglos: para almacenar y manipular datos, como las cartas en un mazo o los símbolos en una tragaperras.
 
 vectores: Para listas dinámicas como cartas en mano (Blackjack), selección de números (Keno), o historial de resultados.
+
 
 Librerías utilizadas:
 
@@ -46,6 +49,7 @@ Librerías utilizadas:
 
 `<algorithm>`: Para funciones como min(), max().
 
+
 Funciones adicionales implementadas:
 
 •	setColor(int): Cambia el color del texto en consola.
@@ -70,6 +74,7 @@ Funciones adicionales implementadas:
 
 •	generarNumerosKeno() / compararNumerosKeno() / calcularGananciaKeno(): Para el juego de Keno.
 
+
 🎨 Elementos visuales (interfaz de consola)
 
 Gráficos en ASCII y UTF-8: Se implementaron funciones como showWin(), showLoss() y showJackpot() que muestran animaciones en arte ASCII para representar de manera visual si el jugador ganó, perdió o consiguió un premio especial.
@@ -77,6 +82,7 @@ Gráficos en ASCII y UTF-8: Se implementaron funciones como showWin(), showLoss(
 Uso de colores en consola: Gracias a la función setColor() (basada en windows.h), se logra una diferenciación visual entre mensajes de error, información, éxito y menús.
 
 Codificación UTF-8 (SetConsoleOutputCP(CP_UTF8)): Permite mostrar correctamente caracteres especiales como emojis
+
 
 Validaciones adicionales:
 
@@ -88,11 +94,13 @@ Validaciones adicionales:
 
 •	Control de entradas erróneas (caracteres no numéricos, vacíos, fuera de rango).
 
+
 🧩 Estructura general del juego
 
 El juego comienza solicitando información básica del usuario o usuarios, como nombre, edad y saldo inicial. Se valida que todos los jugadores sean mayores de edad (18+) y que posean un saldo positivo para ingresar al casino. Esta verificación se realiza mediante funciones que controlan los datos ingresados y previenen errores o comportamientos no deseados, aplicando ciclos do-while y estructuras condicionales.
 
 El núcleo del sistema está compuesto por funciones separadas para cada parte lógica del juego. Esto permite una organización clara y escalable, respetando principios de programación estructurada. Además, se utilizan switch-case para navegación de menús, vectores y arreglos para manejar datos internos (como cartas o combinaciones) y funciones auxiliares para validación y presentación visual.
+
 
 🎰 Descripción de los modos de juego
 
@@ -145,11 +153,13 @@ Se utiliza para tomar decisiones en el flujo del programa.
 
 ![image](https://github.com/user-attachments/assets/3b68b725-4894-45c8-92b7-7d8caef4e208)
 
+
 switch – case
 
 Sirve para gestionar menús y opciones múltiples de forma estructurada.
  
 ![image](https://github.com/user-attachments/assets/4eb8ac60-5097-41f5-9e49-fbfa64c915c8)
+
 
 For
 
@@ -157,17 +167,20 @@ Se usa para recorrer arreglos y vectores.
 
 ![image](https://github.com/user-attachments/assets/3e0ef574-62f6-421b-b45e-9910a67bf896)
 
+
 while y do-while
 
 Se aplican en validaciones y repeticiones hasta que se cumpla una condición válida.
 
 ![image](https://github.com/user-attachments/assets/f47aefe4-d942-4334-84f1-8702d6661e75)
+
  
 Funciones
 
 El código está dividido en funciones para organizar mejor el flujo.
 
 ![image](https://github.com/user-attachments/assets/c2c20f3c-823d-4306-be0d-e761a98cd079)
+
  
 Estructuras
 
@@ -175,11 +188,13 @@ Sirven para agrupar datos relacionados de un jugador.
  
 ![image](https://github.com/user-attachments/assets/2c85700d-6c6b-42f1-8756-27dae853458f)
 
+
 Matrices
 
 Se utilizan para almacenar datos en forma de tabla, es decir, en filas y columnas.
  
 ![image](https://github.com/user-attachments/assets/ff83a17a-2f7d-4fb0-afce-024b50cfc6bb)
+
 
 Consideraciones técnicas del Desarrollo
 
