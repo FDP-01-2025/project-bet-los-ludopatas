@@ -13,8 +13,6 @@ Esta diversidad permite una experiencia más rica, entretenida y cercana a un ca
 
 # 🧠 Mecánica Principal del Juego
 
-![image](https://github.com/user-attachments/assets/02dcff03-8632-4bc6-a21a-01ca1028a496)
-
 
 If-else: Determina si hay combinaciones ganadoras también maneja la lógica del juego y las decisiones del jugador.
 
@@ -107,6 +105,8 @@ El núcleo del sistema está compuesto por funciones separadas para cada parte l
 
 
 # 🎰 Descripción de los modos de juego
+
+![image](https://github.com/user-attachments/assets/a8030d91-490c-434b-84df-c8de1b70fe64)
 
 
 🎯 1. Ruleta 
