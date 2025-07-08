@@ -4,7 +4,7 @@ Casino bet++
 
 ![image](https://github.com/user-attachments/assets/71b3467a-0bf9-40a0-b14e-1ef08b32d1f1)
 
-El juego Bet++ (Los Ludópatas) se basa en la temática de un casino virtual moderno, diseñado para ofrecer una experiencia de entretenimiento digital que simula dinámicas reales de un casino físico.
+El juego Bet++ se basa en la temática de un casino virtual moderno, diseñado para ofrecer una experiencia de entretenimiento digital que simula dinámicas reales de un casino físico.
 
 La ambientación se enfoca en brindar al usuario una variedad de modos de juego clásicos, como la ruleta, blackjack, tragamonedas y keno, cada modo de juego está pensado para ofrecer una dinámica distinta y mantener la atención del usuario.
 
