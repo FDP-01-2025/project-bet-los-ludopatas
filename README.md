@@ -273,14 +273,15 @@ desde la página oficial: https://git-scm.com/downloads
 
  **macOS:** Abre tu terminal y escribe: xcode-select --install
 
-## Instrucciones de Ejecución
+ ## Instrucciones de Ejecución
 1.  Abre una herramienta llamada "Git Bash"
-2. Clona este repositorio en tu máquina local:
+2. Clona este repositorio en tu máquina local: desde la git bash clona este repositorio
    git clone [https://github.com/FDP-01-2025/project-bet-los-ludopatas]
-    y luego escribe code . para abrir el visual studio code si lo tienes instalado 
-3. Abrir la terminal  para esto ocupa crt+ñ.
-4. una vez abierto la terminal escribe esto:
- g++ -o "nombre de tu exe" "nombre del archivo recuerda agregar el .cpp al final"
+    y luego escribe code . para abrir el visual studio code si lo tienes instalado.
+   
+4. Abrir la terminal  para esto ocupa crt+ñ.
+5. una vez abierto la terminal escribe esto: g++ main.cpp -o programa -I./src (copiar) y presiona Enter
+luego escribe ./programa.exe en la terminal para crear el archivo.exe (programa.exe)
  ejemplo:
  g++ -o baki ludopatas.cpp
    luego escribe esto:
@@ -292,13 +293,12 @@ desde la página oficial: https://git-scm.com/downloads
         cd project-bet-los-ludopatas
 4.  **Compilar el Juego (prepararlo para ejecutar):**
      Vamos a convertir el código del juego en un programa que tu computadora pueda ejecutar. Escribe el siguiente comando y presiona enter :
-        g++ -o baki ludopatas.cpp
+         g++ main.cpp -o programa -I./src
 
 5.  **Ejecutar el Juego:**
      ¡Casi listo! Ahora puedes iniciar Bet++. Escribe el siguiente comando y presiona Enter:
-        ./baki.exe
-        *(Si estás en Linux o macOS, simplemente usa: `./baki)*
-
+        ./programa.exe
+        *(Si estás en Linux o macOS, simplemente usa: `./programa)*
  ## Cómo Jugar
 Al iniciar Bet++, el programa te guiará a través de los primeros pasos:
 1. **Ingreso de Datos:**Se te pedirá que ingreses tu nombre y edad.
